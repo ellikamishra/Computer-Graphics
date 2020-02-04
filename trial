@@ -1,0 +1,62 @@
+OptiPlex-5060:~/abc$ git init
+Initialized empty Git repository in /home/a3-402-07/abc/.git/
+a3-402-07@a340207-OptiPlex-5060:~/abc$ git remote add origin https://github.com/ellikamishra/dsfl.git
+a3-402-07@a340207-OptiPlex-5060:~/abc$ git pull origin master 
+remote: Enumerating objects: 36, done.
+remote: Counting objects: 100% (36/36), done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 36 (delta 14), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (36/36), done.
+From https://github.com/ellikamishra/dsfl
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+a3-402-07@a340207-OptiPlex-5060:~/abc$ git add .
+a3-402-07@a340207-OptiPlex-5060:~/abc$ git commit -m "exp4"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'a3-402-07@a340207-OptiPlex-5060.(none)')
+a3-402-07@a340207-OptiPlex-5060:~/abc$  git config --global user.email "you@example.com"
+a3-402-07@a340207-OptiPlex-5060:~/abc$   git config --global user.name "Your Name"
+a3-402-07@a340207-OptiPlex-5060:~/abc$ git config --global user.email "you@example.com"
+a3-402-07@a340207-OptiPlex-5060:~/abc$ git config --global user.email "ellikamishra009@gmail.com"
+a3-402-07@a340207-OptiPlex-5060:~/abc$ git config --global user.name "Ellika"
+a3-402-07@a340207-OptiPlex-5060:~/abc$ git commit -m "exp4"
+[master 44609c1] exp4
+ 15 files changed, 523 insertions(+)
+ create mode 100644 expression4/.cproject
+ create mode 100644 expression4/.project
+ create mode 100644 expression4/.settings/language.settings.xml
+ create mode 100644 expression4/Debug/expression4
+ create mode 100644 expression4/Debug/makefile
+ create mode 100644 expression4/Debug/objects.mk
+ create mode 100644 expression4/Debug/sources.mk
+ create mode 100644 expression4/Debug/src/expression4.d
+ create mode 100644 expression4/Debug/src/expression4.o
+ create mode 100644 expression4/Debug/src/stack.d
+ create mode 100644 expression4/Debug/src/stack.o
+ create mode 100644 expression4/Debug/src/subdir.mk
+ create mode 100644 expression4/src/expression4.cpp
+ create mode 100644 expression4/src/stack.cpp
+ create mode 100644 expression4/src/stack.h
+a3-402-07@a340207-OptiPlex-5060:~/abc$ git push origin master
+Username for 'https://github.com': ellikamishra
+Password for 'https://ellikamishra@github.com': 
+Counting objects: 21, done.
+Delta compression using up to 6 threads.
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (21/21), 95.35 KiB | 0 bytes/s, done.
+Total 21 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/ellikamishra/dsfl.git
+   6ddab7f..44609c1  master -> master
+a3-402-07@a340207-OptiPlex-5060:~/abc$ 
+
