@@ -1,16 +1,30 @@
 #include<GL/glut.h>
 #include<stdio.h>
 #include<math.h>
+#include<graphics.h>
 int n;
-
+void palete();
+void setPixel(GLint x,GLint y);
 void init()
 {
    glClearColor(0.0,0.0,0.0,0.0);
    glMatrixMode(GL_PROJECTION);
    //glLoadIdentity();
    gluOrtho2D(0,500,0,500);
+  
 }
-
+/*void boundaryFill4(int x, int y, int fill_color,int boundary_color) 
+{ 
+    if(setPixel(x, y) != boundary_color && 
+       setPixel(x, y) != fill_color) 
+    { 
+        setPixel(x, y); 
+        boundaryFill4(x + 1, y, fill_color, boundary_color); 
+        boundaryFill4(x, y + 1, fill_color, boundary_color); 
+        boundaryFill4(x - 1, y, fill_color, boundary_color); 
+        boundaryFill4(x, y - 1, fill_color, boundary_color); 
+    } 
+} */
 int round1(double number)
 {
    return (number>=0) ? (int)(number+0.5):(int)(number-0.5);
@@ -88,11 +102,29 @@ void mouseClick(int button, int state, int x, int y)
    fflush(stdout);                         
 }
 
+void palete(){
+  int i=0,x=100,y=100;
+   int fill_color=9;
+   int boundary_color=0;
+for(i=0;i<4;i++)
+{  LineWithDDA(x,y,x,y-50);
+   LineWithDDA(x,y,x+50,y);
+   LineWithDDA(x,y-50,x+50,y-50);
+   LineWithDDA(x+50,y-50,x+50,y);
+   x=x+50;
+  // boundaryFill4(x,y,fill_color,boundary_color);
+
+}
+
+}
+
+
 void Display()
 {
   glClearColor(0,0,0,0);
   glClear(GL_COLOR_BUFFER_BIT);
   //LineWithDDA(0,0,50,50);
+   palete();
   glFlush();
 }
 
@@ -106,6 +138,7 @@ int main(int argc,char** argv)
   init();
   glutDisplayFunc(Display);
   glutMouseFunc(mouseClick);
+  
   glutMainLoop();
   return 0;
 }
