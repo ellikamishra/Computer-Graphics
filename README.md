@@ -1,2 +1,2 @@
-# cgl
+# Computer Graphics
 Repo consists of Computer graphics codes written in C and C++ language. 
